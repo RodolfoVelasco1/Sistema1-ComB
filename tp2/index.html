@@ -1,0 +1,87 @@
+﻿<!-- Alumno: Rodolfo Nicolás Velasco Fessler -->
+<!-- Link del repositorio: https://github.com/RodolfoVelasco1/Sistema1-ComB -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - Formulario Carga de Datos</title>
+    <script>
+        function mostrarDatos(){
+			vapellido = document.getElementById("apellido").value;
+			vnombre = document.getElementById("nombre").value;
+			vdni = document.getElementById("dni").value;
+			vfecha = document.getElementById("fecha").value;
+			vdomicilio = document.getElementById("domicilio").value;
+			vlocalidad = document.getElementById("localidad").value;
+            vbox1 = document.getElementById("box1").checked ? "Español" : "No habla español";
+            vbox2 = document.getElementById("box2").checked ? "Inglés" : "No habla inglés";
+            vbox3 = document.getElementById("box3").checked ? "Francés" : "No habla francés";
+            vbox4 = document.getElementById("box4").checked ? "Chino" : "No habla chino";
+            vrange1 = document.getElementById("español").value;
+            vrange2 = document.getElementById("ingles").value;
+            vrange3 = document.getElementById("frances").value;
+            vrange4 = document.getElementById("chino").value;
+		
+			document.write("Los datos ingresados fueron: <br/>");
+			document.write("Nombre: "+vnombre+"<br/>");
+			document.write("Apellido: "+vapellido+"<br/>");
+			document.write("Número de DNI: "+vdni+"<br/>");
+			document.write("Fecha de Nacimiento: "+vfecha+"<br/>");
+			document.write("Domicilio: "+vdomicilio+"<br/>");
+			document.write("Localidad: "+vlocalidad+"<br/>");
+            document.write("Idiomas que conoce: <br/>");
+            document.write("Idioma 1: " + vbox1 + " (Nivel de conocimiento: " + vrange1 + "%)<br/>");
+            document.write("Idioma 2: " + vbox2 + " (Nivel de conocimiento: " + vrange2 + "%)<br/>");
+            document.write("Idioma 3: " + vbox3 + " (Nivel de conocimiento: " + vrange3 + "%)<br/>");
+            document.write("Idioma 4: " + vbox4 + " (Nivel de conocimiento: " + vrange4 + "%)<br/>");
+
+			document.write("<br/><strong>¡Gracias por llenar el formulario!</strong>");
+		}
+    </script>
+</head>
+<body>
+    <h2>Formulario Carga de Datos</h2>
+    <form action="">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <p></p>
+        <label for="dni">Nro DNI</label>
+        <input type="number" id="dni">
+        <label for="fecha">Fecha de Nacimiento</label>
+        <input type="date" id="fecha">
+        <p></p>
+        <label for="domicilio">Domicilio</label>
+        <input type="text" id="domicilio">
+        <label for="localidad">Localidad</label>
+        <input type="text" id="localidad">
+        <h2>Idiomas que conoce</h2>
+        <p style="margin-left: 100px;">Nivel de conocimiento del 0% al 100%</p>
+        <input type="checkbox" name="idiomas" id="box1" value="español">
+        <label for="box1">Español</label>
+        <input style="margin-left: 50px;" type="range" id="español" name="español" min="0" max="100" step="1" value="0">
+        <p></p>
+        <input type="checkbox" name="idiomas" id="box2" value="ingles">
+        <label for="box2">Inglés</label>
+        <input style="margin-left: 63px;" type="range" id="ingles" name="ingles" min="0" max="100" step="1" value="0">
+        <p></p>
+        <input type="checkbox" name="idiomas" id="box3" value="frances">
+        <label for="box3">Francés</label>
+        <input style="margin-left: 53px;" type="range" id="frances" name="frances" min="0" max="100" step="1" value="0">
+        <p></p>
+        <input type="checkbox" name="idiomas" id="box4" value="chino">
+        <label for="box4">Chino</label>
+        <input style="margin-left: 65px;" type="range" id="chino" name="chino" min="0" max="100" step="1" value="0">
+        <p></p>
+        <button type="submit" onClick="mostrarDatos()">Enviar</button>
+        <button type="reset">Borrar</button>
+
+
+        
+
+    </form>
+</body>
+</html>
